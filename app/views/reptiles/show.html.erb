@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reptile.name %>
+</p>
+
+<p>
+  <strong>Specie:</strong>
+  <%= @reptile.specie %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @reptile.birthday %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @reptile.gender %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @reptile.weight %>
+</p>
+
+<p>
+  <strong>Morphological pattern:</strong>
+  <%= @reptile.morphological_pattern %>
+</p>
+
+<p>
+  <strong>Morphological father:</strong>
+  <%= @reptile.morphological_father %>
+</p>
+
+<p>
+  <strong>Morphological mother:</strong>
+  <%= @reptile.morphological_mother %>
+</p>
+
+<p>
+  <strong>New animal:</strong>
+  <%= @reptile.new_animal %>
+</p>
+
+<%= link_to (t 'Edit'), edit_reptile_path(@reptile) %> |
+<%= link_to (t 'Back'), reptiles_path %>

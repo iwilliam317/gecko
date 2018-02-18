@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t "reptiles.new.title"%></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t "name" %></th>
+      <th>Specie</th>
+      <th>Birthday</th>
+      <th>Gender</th>      
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reptiles.each do |reptile| %>
+      <tr>
+        <td><%= reptile.name %></td>
+        <td><%= reptile.specie %></td>
+        <td><%= reptile.birthday %></td>
+        <td><%= reptile.gender %></td>        
+        <td><%= link_to  (t 'Show' ), reptile %></td>
+        <td><%= link_to  (t 'Edit'), edit_reptile_path(reptile) %></td>
+        <td><%= link_to  (t 'Destroy'), reptile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to ( t 'New', :model=> t("Reptile")), new_reptile_path %>

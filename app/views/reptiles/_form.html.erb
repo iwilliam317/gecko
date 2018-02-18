@@ -1,0 +1,62 @@
+<%= form_with(model: reptile, local: true) do |form| %>
+  <% if reptile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reptile.errors.count, "error") %> prohibited this reptile from being saved:</h2>
+
+      <ul>
+      <% reptile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :reptile_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :specie %>
+    <%= form.text_field :specie, id: :reptile_specie %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthday %>
+    <%= form.date_select :birthday, id: :reptile_birthday %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.select :gender, ["Macho", "Fêmea"], include_blank: true%>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight %>
+    <%= form.text_field :weight, id: :reptile_weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :morphological_pattern %>
+    <%= form.text_field :morphological_pattern, id: :reptile_morphological_pattern %>
+  </div>
+
+  <div class="field">
+    <%= form.label :morphological_father %>
+    <%= form.text_field :morphological_father, id: :reptile_morphological_father %>
+  </div>
+
+  <div class="field">
+    <%= form.label :morphological_mother %>
+    <%= form.text_field :morphological_mother, id: :reptile_morphological_mother %>
+  </div>
+
+  <div class="field">
+    <%= form.label :new_animal %>
+    <%= form.check_box :new_animal, id: :reptile_new_animal %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
