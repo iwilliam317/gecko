@@ -1,15 +1,5 @@
 <%= form_with(model: reptile, local: true) do |form| %>
-  <% if reptile.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(reptile.errors.count, "error") %> prohibited this reptile from being saved:</h2>
-
-      <ul>
-      <% reptile.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= error_messages_for  @reptile %>
 
   <div class="field">
     <%= form.label :name %>
