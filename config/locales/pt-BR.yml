@@ -13,7 +13,16 @@ pt-BR:
   Show: 'Mostrar'
   Back: Voltar
 
-
+  name: Nome
+  specie: Espécie
+  gender: Sexo
+  birthday: Data de Nascimento
+  weight: Peso
+  morphological_pattern: Padrão Morfológico
+  morphological_father: Morfologia do Pai
+  morphological_mother:  Morfologia da Mãe
+  new_animal: Novo Animal
+  
   reptiles:
     new:
       title: Novo reptíl

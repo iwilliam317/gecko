@@ -51,3 +51,13 @@ en:
       categories: Publish with these categories
       slug: Set a custom url
       author: "Post by:"
+
+  name: Name
+  specie: Specie
+  gender: Gender
+  birthday: Birthday
+  weight: Weight
+  morphological_pattern: Morphological Pattern
+  morphological_father: Morphological Father
+  morphological_mother:  Morphological Mother
+  new_animal: New Animal

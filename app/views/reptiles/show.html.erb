@@ -1,47 +1,49 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t ('name')%>:</strong>
   <%= @reptile.name %>
 </p>
 
+<%= image_tag @reptile.avatar.url %>
+
 <p>
-  <strong>Specie:</strong>
+  <strong><%= t ('specie')%>:</strong>
   <%= @reptile.specie %>
 </p>
 
 <p>
-  <strong>Birthday:</strong>
+  <strong><%= t ('birthday')%>:</strong>
   <%= @reptile.birthday %>
 </p>
 
 <p>
-  <strong>Gender:</strong>
+  <strong><%= t ('gender')%>:</strong>
   <%= @reptile.gender %>
 </p>
 
 <p>
-  <strong>Weight:</strong>
+  <strong><%= t ('weight')%>:</strong>
   <%= @reptile.weight %>
 </p>
 
 <p>
-  <strong>Morphological pattern:</strong>
+  <strong><%= t ('morphological_pattern')%>:</strong>
   <%= @reptile.morphological_pattern %>
 </p>
 
 <p>
-  <strong>Morphological father:</strong>
+  <strong><%= t ('morphological_father')%>:</strong>
   <%= @reptile.morphological_father %>
 </p>
 
 <p>
-  <strong>Morphological mother:</strong>
+  <strong><%= t ('morphological_mother')%>:</strong>
   <%= @reptile.morphological_mother %>
 </p>
 
 <p>
-  <strong>New animal:</strong>
+  <strong><%= t ('new_animal')%>:</strong>
   <%= @reptile.new_animal %>
 </p>
 

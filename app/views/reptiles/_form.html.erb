@@ -1,11 +1,14 @@
-<%= form_with(model: reptile, local: true) do |form| %>
+<%= form_for @reptile, html: { multipart: true } do |form| %>
   <%= error_messages_for  @reptile %>
 
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :reptile_name %>
   </div>
-
+  <div class="field">
+    <%= form.label :avatar %>
+    <%= form.file_field :avatar %>
+  </div>
   <div class="field">
     <%= form.label :specie %>
     <%= form.text_field :specie, id: :reptile_specie %>
@@ -18,7 +21,7 @@
 
   <div class="field">
     <%= form.label :gender %>
-    <%= form.select :gender, ["Macho", "Fêmea"], include_blank: true%>
+    <%= form.select :gender, ["M", "F"], include_blank: true%>
   </div>
 
   <div class="field">
@@ -32,14 +35,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :morphological_father %>
-    <%= form.text_field :morphological_father, id: :reptile_morphological_father %>
+    <%= form.label :morphological_father %>    
+    <%= form.collection_select :morphological_father, @male_reptile, :id ,:name , include_blank: true %>
   </div>
 
   <div class="field">
     <%= form.label :morphological_mother %>
-    <%= form.text_field :morphological_mother, id: :reptile_morphological_mother %>
-  </div>
+    <%= form.collection_select :morphological_mother, @female_reptile, :id ,:name , include_blank: true %>
 
   <div class="field">
     <%= form.label :new_animal %>
