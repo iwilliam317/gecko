@@ -1,7 +1,7 @@
 pt-BR:
 
 
-
+  Homepage: "Página Inicial"
   Reptile: "Reptíl"
   empty: "Não temos nenhum %{model} ainda."
   confirm: Tem certeza?
@@ -12,6 +12,10 @@ pt-BR:
   error_message_header: "%{count} erro(s) impediram este %{model} de ser gravado:"
   Show: 'Mostrar'
   Back: Voltar
+  sign in: "Entrar"
+  sign up: "Cadastrar"
+  sign out: "Sair"
+  search: "Pesquisar"
 
   name: Nome
   specie: Espécie
@@ -22,7 +26,7 @@ pt-BR:
   morphological_father: Morfologia do Pai
   morphological_mother:  Morfologia da Mãe
   new_animal: Novo Animal
-  
+
   reptiles:
     new:
       title: Novo reptíl
@@ -269,3 +273,5 @@ pt-BR:
       long: "%d de %B de %Y, %H:%M"
       short: "%d de %B, %H:%M"
     pm: ''
+
+              

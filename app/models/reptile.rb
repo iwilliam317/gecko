@@ -1,6 +1,6 @@
 class Reptile < ApplicationRecord
 	validates_presence_of :name, :birthday, :gender
-
+	
 	has_attached_file :avatar, style: { medium: "300x300#", thumb: "50x50#" }
 
 	validates_attachment_presence     :avatar
@@ -9,5 +9,7 @@ class Reptile < ApplicationRecord
 
 	scope :male_only, lambda {where("gender = ?", "M")}
 	scope :female_only, lambda {where("gender = ?", "F")}
+	scope :search, lambda { |query| where("name like ?",  "%#{query}%")}
+	 
 
 end

@@ -47,5 +47,5 @@
   <%= @reptile.new_animal %>
 </p>
 
-<%= link_to (t 'Edit'), edit_reptile_path(@reptile) %> |
-<%= link_to (t 'Back'), reptiles_path %>
+<%= link_to (t 'Edit'), edit_reptile_path(@reptile), :class=>"btn btn-warning" %> |
+<%= link_to (t 'Back'), reptiles_path, :class=>"btn btn-default" %>

@@ -52,3 +52,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 gem 'responders', '~> 2.0'
+
+gem 'devise'
+
+gem 'bcrypt-ruby', '3.0.0', :require => 'bcrypt' 
+

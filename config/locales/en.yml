@@ -30,6 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  Homepage: "Homepage"
   Reptile: "Reptile"
   empty: "We don't have any %{collection} yet."
   confirm: Are you sure?
@@ -40,6 +41,10 @@ en:
   error_message_header: "%{count} error(s) prohibited this %{model} from being saved:"
   Show: "Show"
   Back: "Back"
+  sign in: "Sign in"
+  sign up: "Sign up"
+  sign out: "Sign out"
+  search : Search
 
 
   reptiles:

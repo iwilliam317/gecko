@@ -52,6 +52,10 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  #for paperclip gem for windows
   Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin; C:\Program Files\ImageMagick-6.9.9-Q8'
-Paperclip.options[:swallow_stderr] = false
+  Paperclip.options[:swallow_stderr] = false
+
+  #devise
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

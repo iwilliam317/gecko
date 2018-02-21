@@ -1,11 +1,14 @@
 class ReptilesController < ApplicationController
   before_action :set_reptile, only: [:show, :edit, :update, :destroy]
   before_action :load_resources , only: %w(new create edit)
+  before_action :authenticate_user!
 
   # GET /reptiles
   # GET /reptiles.json
   def index
-    @reptiles = Reptile.all
+    puts params[:search].present?
+    @reptiles = Reptile.search(params[:search]) if params[:search].present?
+    @reptiles = Reptile.all unless params[:search].present?
   end
 
   # GET /reptiles/1
