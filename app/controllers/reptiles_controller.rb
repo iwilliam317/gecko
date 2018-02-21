@@ -35,9 +35,11 @@ class ReptilesController < ApplicationController
       if @reptile.save
         format.html { redirect_to @reptile, notice: 'Reptile was successfully created.' }
         format.json { render :show, status: :created, location: @reptile }
+        format.js 
       else
         format.html { render :new }
         format.json { render json: @reptile.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end

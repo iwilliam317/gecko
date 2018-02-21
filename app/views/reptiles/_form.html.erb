@@ -1,6 +1,6 @@
-<%= form_for @reptile, html: { multipart: true } do |form| %>
+<%= form_for @reptile, remote:true , html: { multipart: true } do |form| %>
   <%= error_messages_for  @reptile %>
-
+<div id="messages"></div>
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :reptile_name %>
