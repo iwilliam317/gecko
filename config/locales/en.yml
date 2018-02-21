@@ -45,6 +45,8 @@ en:
   sign up: "Sign up"
   sign out: "Sign out"
   search : Search
+  warning: Warning
+  success: "%{model} successfuly saved"
 
 
   reptiles:

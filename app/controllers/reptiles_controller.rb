@@ -14,48 +14,33 @@ class ReptilesController < ApplicationController
   # GET /reptiles/1
   # GET /reptiles/1.json
   def show
+    respond_with @reptile    
   end
 
   # GET /reptiles/new
   def new
     @reptile = Reptile.new
-   
+    respond_with @reptile   
   end
 
   # GET /reptiles/1/edit
   def edit
+    respond_with @reptile
   end
 
   # POST /reptiles
   # POST /reptiles.json
   def create
-    @reptile = Reptile.new(reptile_params)
-    
-    respond_to do |format|
-      if @reptile.save
-        format.html { redirect_to @reptile, notice: 'Reptile was successfully created.' }
-        format.json { render :show, status: :created, location: @reptile }
-        format.js 
-      else
-        format.html { render :new }
-        format.json { render json: @reptile.errors, status: :unprocessable_entity }
-        format.js
-      end
-    end
-  end
+    @reptile = Reptile.new(reptile_params)   
+    @reptile.save 
+    respond_with @reptile
+end
 
   # PATCH/PUT /reptiles/1
   # PATCH/PUT /reptiles/1.json
   def update
-    respond_to do |format|
-      if @reptile.update(reptile_params)
-        format.html { redirect_to @reptile, notice: 'Reptile was successfully updated.' }
-        format.json { render :show, status: :ok, location: @reptile }
-      else
-        format.html { render :edit }
-        format.json { render json: @reptile.errors, status: :unprocessable_entity }
-      end
-    end
+    respond_with @reptile
+
   end
 
   # DELETE /reptiles/1
@@ -63,10 +48,8 @@ class ReptilesController < ApplicationController
   def destroy
     @reptile.avatar = nil
     @reptile.destroy
-    respond_to do |format|
-      format.html { redirect_to reptiles_url, notice: 'Reptile was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    respond_with @reptiles
+
   end
 
   private
@@ -76,12 +59,12 @@ class ReptilesController < ApplicationController
     end
 
     def load_resources
-       @male_reptile = Reptile.male_only
-       @female_reptile = Reptile.female_only
-    end
+     @male_reptile = Reptile.male_only
+     @female_reptile = Reptile.female_only
+   end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reptile_params
       params.require(:reptile).permit(:name, :specie, :birthday, :gender, :weight, :morphological_pattern, :morphological_father, :morphological_mother, :new_animal, :avatar)
     end
-end
+  end

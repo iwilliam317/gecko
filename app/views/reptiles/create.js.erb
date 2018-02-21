@@ -1,11 +1,32 @@
-var error = <%= @reptile.errors.count %>
-if(error){
+var error = <%= @reptile.errors.count %>;
+console.log(error)
+if(error>0){
+	let html = "";
+	html += "<div class='alert alert-danger'>";
+	html += "<strong><%= t 'warning' %></strong>";
+	html += "<ul>";
+
 	<% @reptile.errors.full_messages.each do |message| %>
-        
-	$("#messages").append("<%= message %>");
+		html += "<li><%= message %></li>";
       <% end %>
+
+	html += "</ul>";
+	html += "</div>";
+
+      $("#messages").append(html);  
 
 }
 else{
+	let html = "";
+	html += "<div class='alert alert-success'>";
+	html += "<strong><%= t 'success', model: Reptile %></strong>";
+	html += "</div>";
 	$("#messages").html("<h1>Cadastrado</h1>");
 }
+
+setTimeout(function(){
+	$("#messages div").fadeOut('slow', function(){
+		$('#messages div').remove();
+	});
+ 
+}, 4000);

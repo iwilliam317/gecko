@@ -27,6 +27,10 @@ pt-BR:
   morphological_mother:  Morfologia da Mãe
   new_animal: Novo Animal
 
+  ##usado na tela de ajax no cadastro de repteis
+  warning: "Atenção"
+  success: "%{model} salvo com sucesso"
+
   reptiles:
     new:
       title: Novo reptíl

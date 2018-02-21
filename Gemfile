@@ -57,3 +57,5 @@ gem 'devise'
 
 gem 'bcrypt-ruby', '3.0.0', :require => 'bcrypt' 
 
+gem 'responders', '~> 2.0'
+

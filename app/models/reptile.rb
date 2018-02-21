@@ -3,7 +3,7 @@ class Reptile < ApplicationRecord
 	
 	has_attached_file :avatar, style: { medium: "300x300#", thumb: "50x50#" }
 
-	validates_attachment_presence     :avatar
+	#validates_attachment_presence     :avatar
 	validates_attachment_size         :avatar, :less_than => 5.megabyte
 	validates_attachment_content_type :avatar, :content_type => %w(image/png image/jpeg  image/jpeg image/gif image/tiff)
 
