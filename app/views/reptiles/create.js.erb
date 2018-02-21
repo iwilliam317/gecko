@@ -1,5 +1,5 @@
 var error = <%= @reptile.errors.count %>;
-console.log(error)
+
 if(error>0){
 	let html = "";
 	html += "<div class='alert alert-danger'>";
@@ -21,7 +21,12 @@ else{
 	html += "<div class='alert alert-success'>";
 	html += "<strong><%= t 'success', model: Reptile %></strong>";
 	html += "</div>";
-	$("#messages").html("<h1>Cadastrado</h1>");
+	
+	$("#messages").append(html);  
+	$( 'form' ).each(function(){
+	    this.reset();
+	});
+
 }
 
 setTimeout(function(){
