@@ -39,6 +39,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :development do
@@ -57,5 +58,5 @@ gem 'devise'
 
 gem 'bcrypt-ruby', '3.0.0', :require => 'bcrypt' 
 
-gem 'responders', '~> 2.0'
+
 
