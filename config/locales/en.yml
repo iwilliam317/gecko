@@ -47,6 +47,7 @@ en:
   search : Search
   warning: Warning
   success: "%{model} successfuly saved"
+  Log in: Log in
 
 
   reptiles:

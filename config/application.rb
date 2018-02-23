@@ -19,7 +19,7 @@ module Gecko
     # -- all .rb files in that directory are automatically loaded.
 
     #i18n
-    #config.i18n.default_locale = "pt-BR"
+    config.i18n.default_locale = "pt-BR"
 
     #rspec
     config.generators do |g|
