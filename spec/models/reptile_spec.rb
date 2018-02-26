@@ -53,6 +53,8 @@ RSpec.describe Reptile, type: :model do
        reptile.save
 
        expect(reptile.name).to eq("Mãe")
+       expect(reptile.gender).not_to eq("F")
+       expect(reptile.birthday) == "2017-01-01"
 
       end
     end
