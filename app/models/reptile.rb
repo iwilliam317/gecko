@@ -10,6 +10,11 @@ class Reptile < ApplicationRecord
 	scope :male_only, lambda {where("gender = ?", "M")}
 	scope :female_only, lambda {where("gender = ?", "F")}
 	scope :search, lambda { |query| where("name like ?",  "%#{query}%")}
+
+
+	def information
+		"#{self.name} #{self.gender}" 
+	end
 	 
 
 end

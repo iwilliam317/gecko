@@ -58,6 +58,13 @@ RSpec.describe Reptile, type: :model do
 
       end
     end
+
+  end
+
+  context "Provide information" do
+    it "shoud give the information about the reptile" do
+      expect(@reptile.information).to eq("Reptil M")
+    end
   end
   
 
