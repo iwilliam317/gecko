@@ -5,8 +5,7 @@ class ReptilesController < ApplicationController
 
   # GET /reptiles
   # GET /reptiles.json
-  def index
-    puts params[:search].present?
+  def index    
     @reptiles = Reptile.search(params[:search]) if params[:search].present?
     @reptiles = Reptile.all unless params[:search].present?
   end
@@ -48,7 +47,7 @@ end
   def destroy
     @reptile.avatar = nil
     @reptile.destroy
-    respond_with @reptiles
+    respond_with @reptile
 
   end
 

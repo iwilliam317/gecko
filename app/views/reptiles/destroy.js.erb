@@ -1,0 +1,21 @@
+var html = "";
+html += "<div class='alert alert-success'>";
+html += "<strong><%= t 'delete', model: Reptile %></strong>";
+html += "</div>";
+
+var id = <%= @reptile.id%>
+
+$("#messages").append(html); 
+$("#reptile_"+id).fadeOut('slow', function(){
+  $("#reptile_"+id).remove()
+}) 
+
+
+setTimeout(function(){
+  $("#messages div").fadeOut('slow', function(){
+    $('#messages div').remove();
+  });
+
+}, 4000);
+
+

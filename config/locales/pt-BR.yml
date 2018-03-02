@@ -31,6 +31,7 @@ pt-BR:
   ##usado na tela de ajax no cadastro de repteis
   warning: "Atenção"
   success: "%{model} salvo com sucesso"
+  delete: "%{model} apagado com sucesso"
 
   reptiles:
     new:
